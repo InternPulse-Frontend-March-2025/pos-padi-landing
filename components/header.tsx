@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import clsx from 'clsx'; // optional, just to clean up classNames
+import clsx from "clsx"; // optional, just to clean up classNames
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/coming-soon', label: 'Solution' },
-    { href: '/coming-soon', label: 'Product' },
-    { href: '/coming-soon', label: 'Blog' },
-    { href: '/coming-soon', label: 'About Us' },
+    { href: "/", label: "Home" },
+    { href: "/coming-soon", label: "Solution" },
+    { href: "/coming-soon", label: "Product" },
+    { href: "/coming-soon", label: "Blog" },
+    { href: "/coming-soon", label: "About Us" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Image 
+          <Image
             src="/images/logo.svg"
             alt="Logo"
             width={200}
@@ -53,13 +53,25 @@ const Header = () => {
 
         {/* Right Buttons */}
         <div className="flex items-center gap-4">
-        <Button className="hidden md:flex bg-green-500 hover:bg-green-600 rounded-2xl">
+          <Button
+            className="hidden md:flex bg-green-500 hover:bg-green-600 rounded-2xl"
+            onClick={() =>
+              (window.location.href =
+                "https://pos-padi.netlify.app/")
+            }
+          >
             Log In
           </Button>
-          <Button variant="outline" className="hidden md:flex rounded-2xl border-green-500 text-green-500 hover:bg-green-50 hover:text-green-600">
+          <Button
+            variant="outline"
+            className="hidden md:flex rounded-2xl border-green-500 text-green-500 hover:bg-green-50 hover:text-green-600"
+            onClick={() =>
+              (window.location.href =
+                "https://pos-padi.netlify.app/admin-signup")
+            }
+          >
             Sign Up
           </Button>
-          
 
           {/* Hamburger button */}
           <Button
