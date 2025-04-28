@@ -63,7 +63,7 @@ export function Features() {
           <div className="flex-shrink-0 w-full snap-start md:w-auto">
             <FeatureCard
               title="Loyalty Points"
-              description="Customers get rewarded for transactions"
+              description="Customers get rewarded for transactions by means of loyalty points"
               imageSrc="/images/loyalty.svg"
               imageAlt="Loyalty Points"
               itemVariants={itemVariants}

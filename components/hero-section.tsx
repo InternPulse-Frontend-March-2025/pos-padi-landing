@@ -68,10 +68,13 @@ export function HeroSection() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
-            <Button className="bg-green-500 hover:bg-green-600 text-white rounded-full" onClick={() =>
-              (window.location.href =
-                "https://pos-padi.netlify.app/admin-signup")
-            }>
+            <Button
+              className="bg-green-500 hover:bg-green-600 text-white rounded-full"
+              onClick={() =>
+                (window.location.href =
+                  "https://pos-padi.netlify.app/admin-signup")
+              }
+            >
               Get Started
             </Button>
             <Button
